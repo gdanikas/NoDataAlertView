@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AAA-0c-MOc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="buK-dF-YdZ">
+            <objects>
+                <navigationController id="AAA-0c-MOc" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OdR-kw-Ipi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ofb-ih-3Tb" kind="relationship" relationship="rootViewController" id="3gn-LY-bak"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rd-wT-5wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="401"/>
+        </scene>
+        <!--DemoViewController-->
+        <scene sceneID="W73-iW-WEU">
+            <objects>
+                <viewController title="DemoViewController" id="ofb-ih-3Tb" customClass="DemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCU-o9-Hid"/>
+                        <viewControllerLayoutGuide type="bottom" id="odP-hf-OPT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kd5-J9-dQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7E-6l-HFN" userLabel="No Data Alert View" customClass="NoDataAlertView">
+                                <rect key="frame" x="0.0" y="171" width="600" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="S7E-6l-HFN" secondAttribute="centerY" constant="0.5" id="6HR-2b-gyx"/>
+                            <constraint firstItem="S7E-6l-HFN" firstAttribute="leading" secondItem="Kd5-J9-dQZ" secondAttribute="leading" id="apf-0I-kIG"/>
+                            <constraint firstAttribute="trailing" secondItem="S7E-6l-HFN" secondAttribute="trailing" id="w0j-Dd-WBs"/>
+                            <constraint firstItem="S7E-6l-HFN" firstAttribute="height" secondItem="Kd5-J9-dQZ" secondAttribute="height" multiplier="0.36" id="yCS-KI-tJf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="No Data Alert View" id="aOz-mE-qzt"/>
+                    <connections>
+                        <outlet property="noDataAlertView" destination="S7E-6l-HFN" id="WMZ-zD-hfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKK-2D-Y41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="401"/>
+        </scene>
+    </scenes>
+</document>
