@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDataAlertView">
+            <connections>
+                <outlet property="circleContainter" destination="Lpp-4E-jSC" id="oWY-xu-qq5"/>
+                <outlet property="circleImgRelHeightConstr" destination="OeX-Hq-Qbg" id="Trn-8K-HWu"/>
+                <outlet property="container" destination="EQY-z5-TR7" id="q3W-G8-eBy"/>
+                <outlet property="iconImageView" destination="85b-UF-caM" id="0do-ub-VAW"/>
+                <outlet property="leftLineSpaceConstr" destination="jE4-9b-Lry" id="SWP-kH-j3U"/>
+                <outlet property="leftLineView" destination="40E-aQ-km3" id="gL5-YE-Tla"/>
+                <outlet property="messageLbl" destination="aSJ-oS-USe" id="fra-jb-2qy"/>
+                <outlet property="rightLineSpaceConstr" destination="iMw-8E-jVi" id="GGO-xO-iaJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="193"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQY-z5-TR7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="193"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-eQ-jSr" userLabel="Top space layout helper">
+                            <rect key="frame" x="285" y="0.0" width="30" height="14"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="kzS-Uz-4xW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpp-4E-jSC" userLabel="Circle container">
+                            <rect key="frame" x="255" y="14" width="91" height="91"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no data icon" translatesAutoresizingMaskIntoConstraints="NO" id="85b-UF-caM" userLabel="Circle Icon img">
+                                    <rect key="frame" x="20" y="20" width="51" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="85b-UF-caM" secondAttribute="height" multiplier="1:1" id="2Rd-IS-Iic"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="85b-UF-caM" firstAttribute="height" secondItem="Lpp-4E-jSC" secondAttribute="height" multiplier="0.565" id="OeX-Hq-Qbg"/>
+                                <constraint firstAttribute="centerX" secondItem="85b-UF-caM" secondAttribute="centerX" id="cSg-b8-27K"/>
+                                <constraint firstAttribute="width" secondItem="Lpp-4E-jSC" secondAttribute="height" multiplier="1:1" id="pok-8X-650"/>
+                                <constraint firstAttribute="centerY" secondItem="85b-UF-caM" secondAttribute="centerY" id="qnL-Yx-NWl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40E-aQ-km3" userLabel="Left line view">
+                            <rect key="frame" x="0.0" y="59" width="245" height="2"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="uz6-EK-vGX"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWd-eS-TsI" userLabel="Right line view">
+                            <rect key="frame" x="356" y="59" width="244" height="2"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="fDV-T5-YeX"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="aSJ-oS-USe" userLabel="Alert Message label">
+                            <rect key="frame" x="20" y="115" width="560" height="68"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                            <color key="textColor" red="0.50196078430000002" green="0.50980392159999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86666666670000003" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Lpp-4E-jSC" firstAttribute="centerY" secondItem="40E-aQ-km3" secondAttribute="centerY" id="4pY-OX-J5L"/>
+                        <constraint firstAttribute="bottom" secondItem="aSJ-oS-USe" secondAttribute="bottom" constant="10" id="Cw7-Ax-NWj"/>
+                        <constraint firstAttribute="trailing" secondItem="aSJ-oS-USe" secondAttribute="trailing" constant="20" id="I6x-32-Pqk"/>
+                        <constraint firstAttribute="centerX" secondItem="Lpp-4E-jSC" secondAttribute="centerX" id="LRr-Np-NqV"/>
+                        <constraint firstItem="eWd-eS-TsI" firstAttribute="centerY" secondItem="Lpp-4E-jSC" secondAttribute="centerY" id="WsJ-QI-Rxf"/>
+                        <constraint firstItem="jP4-eQ-jSr" firstAttribute="height" secondItem="EQY-z5-TR7" secondAttribute="height" multiplier="0.071" id="ZpX-qG-dSq"/>
+                        <constraint firstItem="aSJ-oS-USe" firstAttribute="leading" secondItem="EQY-z5-TR7" secondAttribute="leading" constant="20" id="dHD-kq-5Rf"/>
+                        <constraint firstItem="eWd-eS-TsI" firstAttribute="leading" secondItem="Lpp-4E-jSC" secondAttribute="trailing" constant="10" id="iMw-8E-jVi"/>
+                        <constraint firstItem="Lpp-4E-jSC" firstAttribute="leading" secondItem="40E-aQ-km3" secondAttribute="trailing" constant="10" id="jE4-9b-Lry"/>
+                        <constraint firstItem="Lpp-4E-jSC" firstAttribute="top" secondItem="jP4-eQ-jSr" secondAttribute="bottom" id="lUH-9I-bxZ"/>
+                        <constraint firstAttribute="trailing" secondItem="eWd-eS-TsI" secondAttribute="trailing" id="niy-10-9rj"/>
+                        <constraint firstItem="40E-aQ-km3" firstAttribute="leading" secondItem="EQY-z5-TR7" secondAttribute="leading" id="rHY-wX-bhu"/>
+                        <constraint firstItem="jP4-eQ-jSr" firstAttribute="top" secondItem="EQY-z5-TR7" secondAttribute="top" id="rNn-dz-smb"/>
+                        <constraint firstItem="aSJ-oS-USe" firstAttribute="top" secondItem="Lpp-4E-jSC" secondAttribute="bottom" constant="10" id="rX3-B9-U5y"/>
+                        <constraint firstItem="Lpp-4E-jSC" firstAttribute="height" secondItem="EQY-z5-TR7" secondAttribute="height" multiplier="0.469" id="u1T-eT-Qvd"/>
+                        <constraint firstAttribute="centerX" secondItem="jP4-eQ-jSr" secondAttribute="centerX" id="zQ8-xD-UIB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EQY-z5-TR7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6fH-uD-wcU"/>
+                <constraint firstAttribute="bottom" secondItem="EQY-z5-TR7" secondAttribute="bottom" id="8qF-7x-JJr"/>
+                <constraint firstItem="EQY-z5-TR7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lR8-h8-xFc"/>
+                <constraint firstAttribute="trailing" secondItem="EQY-z5-TR7" secondAttribute="trailing" id="mej-qv-wDG"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="478" y="150"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no data icon" width="66" height="66"/>
+    </resources>
+</document>
